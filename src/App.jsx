@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-// ─── Mock Firebase users ──────────────────────────────────────────────────────
+// ─────────────────────────────────────────────────────────
 const MOCK_USERS = [
   { email: "layla@floraflow.com", password: "password123", role: "customer", name: "Layla Al-Rashid" },
   { email: "admin@floraflow.com", password: "admin123",    role: "admin",    name: "Nour Hassan"     },
@@ -14,7 +14,7 @@ const daysSince  = (s) => Math.round((today - new Date(s)) / 86400000);
 const isStale    = (s) => daysSince(s) > 5;
 const isReminder = (s) => { const d = daysUntil(s); return d >= 0 && d <= 3; };
 
-// ─── Arabic-themed but English events ────────────────────────────────────────
+// ───────────────────────────────────────────
 const INITIAL_EVENTS = [
   { id:1, name:"Al-Rashid Family Wedding",          date: fmt(addDays(today, 2)),  category:"Wedding"    },
   { id:2, name:"Sarah & Mohammed Engagement Party", date: fmt(addDays(today, 3)),  category:"Engagement" },
